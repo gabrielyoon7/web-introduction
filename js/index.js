@@ -84,7 +84,7 @@ const makeTable = () => {
 }
 
 const checkBox = (rank, title) => (
-  `<input type="checkbox" name="xxx" value="yyy">${title}</input>`
+  `<input type="checkbox" name="${title}" value="${title}">${title}</input>`
 )
 
 const makeMovieCheckBox = () => {
