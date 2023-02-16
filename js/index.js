@@ -78,9 +78,25 @@ const movies = [
   },
 ]
 
-const init = () => {
+const makeTable = () => {
   const element = document.getElementById('tbody');
   element.innerHTML = movies.map((m) => tableRow(m.rank, m.title, m.poster, m.description, m.link)).join('');
+}
+
+const checkBox = (rank, title) => (
+  `<input type="checkbox" name="xxx" value="yyy">${title}</input>`
+)
+
+const makeMovieCheckBox = () => {
+  const element = document.getElementById('movieCheckBox');
+  element.innerHTML = movies.map((m) => checkBox(m.rank, m.title)).join('');
+}
+
+
+
+const init = () => {
+  makeTable();
+  makeMovieCheckBox();
 }
 window.onload = function () {
   init();
